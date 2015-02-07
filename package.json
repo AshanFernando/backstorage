@@ -2,7 +2,7 @@
   "name": "backstorage",
   "version": "0.0.0",
   "main": "dist/backstorage.min.js",
-  "description": "This library provides a plaform for data storage which connects different storage services (Browser storage, RestfulAPI & etc.) hiding the underlying complexities that involves Distributed Data Synchronization, Failure handling, Transactions & etc.",
+  "description": "This library provides a platform for data storage which connects different storage services (Browser storage, RestfulAPI & etc.) hiding the underlying complexities that involves Distributed Data Synchronization, Failure handling, Transactions & etc.",
   "repository": {
     "type": "git",
     "url": "git://github.com/AshanFernando/backstorage.git"
@@ -13,6 +13,7 @@
   "readmeFilename": "README.md",
   "dependencies": {},
   "devDependencies": {
+    "grunt-contrib-copy": "~0.7.0",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-jshint": "~0.6.4",
     "grunt-contrib-uglify": "~0.2.4",
