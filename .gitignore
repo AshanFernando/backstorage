@@ -1,4 +1,4 @@
-bower_components/
+src/_libs
 node_modules/
 temp/
 tmp/
