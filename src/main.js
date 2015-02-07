@@ -6,10 +6,8 @@ var backstorage = function() {
   return true;
 };
 
-
 // Version.
-backstorage.VERSION = '0.0.0';
-
+backstorage.VERSION = '0.0.1';
 
 // Export to the root, which is probably `window`.
-root.backstorage = backstorage;
+root.BK = backstorage;
