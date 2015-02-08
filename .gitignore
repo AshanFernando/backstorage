@@ -1,4 +1,4 @@
-src/_libs
+external/
 node_modules/
 temp/
 tmp/
