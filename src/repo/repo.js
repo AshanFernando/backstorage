@@ -1,17 +1,3 @@
-(function(root, $, _, Backbone) {
-  "use strict";
-
-// base function.
-var backstorage = backstorage || {};
-
-backstorage.protocols = ['http'];
-
-// version.
-backstorage.VERSION = '0.0.1';
-
-// export to the root, which is probably `window`.
-root.bs = backstorage;
-
 backstorage.repo = function (uri, options) {
     var repo, model, collection;
 
@@ -30,6 +16,3 @@ backstorage.repo = function (uri, options) {
 
     return repo;
 };
-
-
-}(this, this.jQuery, this._, this.Backbone));

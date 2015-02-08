@@ -14,11 +14,12 @@ module.exports = function (grunt) {
                 src: [
                   'src/_intro.js',
                   'src/main.js',
+                  'src/repo/*.js',
                   'src/_outro.js'
                 ],
                 dest: 'dist/<%= pkg.name.replace(".js", "") %>.js'
             },
-            extras : {
+            extras: {
                 src: [
                    'test/units/*.js'
                 ],
@@ -48,12 +49,19 @@ module.exports = function (grunt) {
         },
 
         uglify: {
-            options: {
-                banner: '/*! <%= pkg.name.replace(".js", "") %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
-            },
             dist: {
+                options: {
+                    preserveComments: false,
+                    sourceMap: true,
+                    sourceMapName: 'dist/<%= pkg.name.replace(".js", "") %>.min.map',
+                    banner: '/*! <%= pkg.name.replace(".js", "") %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+                },
                 files: {
                     'dist/<%= pkg.name.replace(".js", "") %>.min.js': ['<%= concat.basic.dest %>'],
+                }
+            },
+            libs: {
+                files: {
                     'dist/libs/backbone.min.js': ['<%= bower.directory %>/backbone/backbone.js'],
                     'dist/libs/backbone-relational.min.js': ['<%= bower.directory %>/backbone-relational/backbone-relational.js']
                 }

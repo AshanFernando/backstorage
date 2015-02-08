@@ -1,3 +1,2 @@
-(function(root, undefined) {
-
+(function(root, $, _, Backbone) {
   "use strict";
