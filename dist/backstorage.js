@@ -1,19 +1,8 @@
 (function(root, $, _, Backbone) {
   "use strict";
 
-// base function.
-var backstorage = backstorage || {};
-
-backstorage.protocols = ['http'];
-
-// version.
-backstorage.VERSION = '0.0.1';
-
-// export to the root, which is probably `window`.
-root.bs = backstorage;
-
-backstorage.repo = function (uri, options) {
-    var repo, model, collection;
+var repo = function (uri, options) {
+    var model, collection;
 
     options.model = options.model || {};
     options.model.relations = model.relations || options.relations;
@@ -26,10 +15,20 @@ backstorage.repo = function (uri, options) {
     options.collection.model = model;
     collection = Backbone.Collection.extend(options.collection);
 
-    repo = { model: model, collection: collection };
-
-    return repo;
+    return  { model: model, collection: collection };
 };
 
+
+// base function.
+var backstorage = backstorage || {};
+
+// version.
+backstorage.VERSION = '0.0.1';
+
+backstorage.repo = repo;
+// initialize repo
+
+// export to the root, which is probably `window`.
+root.bs = backstorage;
 
 }(this, this.jQuery, this._, this.Backbone));

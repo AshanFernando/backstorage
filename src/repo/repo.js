@@ -1,5 +1,5 @@
-backstorage.repo = function (uri, options) {
-    var repo, model, collection;
+var repo = function (uri, options) {
+    var model, collection;
 
     options.model = options.model || {};
     options.model.relations = model.relations || options.relations;
@@ -12,7 +12,5 @@ backstorage.repo = function (uri, options) {
     options.collection.model = model;
     collection = Backbone.Collection.extend(options.collection);
 
-    repo = { model: model, collection: collection };
-
-    return repo;
+    return  { model: model, collection: collection };
 };
